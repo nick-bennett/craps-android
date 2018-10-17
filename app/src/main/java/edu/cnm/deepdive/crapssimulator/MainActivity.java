@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     switch (item.getItemId()) {
       case R.id.next:
         game.play();
+        // TODO Get tally & rolls, pass as arguments.
         updateTally();
         updateRolls();
         break;
@@ -148,8 +149,10 @@ public class MainActivity extends AppCompatActivity {
       runOnUiThread(new Runnable() {
         @Override
         public void run() {
+          // TODO Get tally & rolls, pass as arguments.
           updateTally();
           updateRolls();
+          // TODO invalidate menu.
         }
       });
     }
